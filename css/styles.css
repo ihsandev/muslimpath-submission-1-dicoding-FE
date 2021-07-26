@@ -1,0 +1,288 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+header {
+  background-color: #353535;
+  padding: 24px 0px;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+header nav .logo img {
+  width: 100px;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  display: block;
+  text-decoration: none;
+  color: #ffc71f;
+  padding: 6px 24px;
+  border-radius: 50px;
+  margin-left: 16px;
+}
+
+.active,
+nav ul li a:hover {
+  background-color: #ffc71f;
+  color: #353535;
+}
+
+.btn-burger {
+  display: none;
+}
+
+section,
+aside {
+  padding: 80px 16px;
+  color: #fff;
+}
+
+.subtitle {
+  margin-bottom: 36px;
+}
+
+.subtitle h1 {
+  color: #353535;
+  margin-bottom: 5px;
+}
+
+hr.line {
+  border: none;
+  border-bottom: 4px solid #ffc71f;
+  width: 50px;
+}
+
+section.welcome {
+  background-color: #353535;
+  min-height: 95vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+section.welcome > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+}
+
+section.welcome .hero-image {
+  background-image: url("/assets/image/quran1.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 60vh;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 16px 16px 0px 0px #ffc71f;
+}
+
+section.welcome article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 80px;
+  box-sizing: border-box;
+}
+
+section.welcome article h2 {
+  margin: 24px 0px;
+  font-size: 3rem;
+  color: #ffc71f;
+}
+
+section.welcome article h1 {
+  font-size: x-large;
+}
+
+section.welcome article p {
+  line-height: 36px;
+}
+
+section.about {
+  color: #353535;
+}
+
+section.about article {
+  display: flex;
+}
+
+section.about article > div:nth-of-type(1) {
+  line-height: 28px;
+  margin-right: 2.5rem;
+  text-align: justify;
+}
+
+section.about article img {
+  width: 220px;
+  border-radius: 35px;
+}
+
+section.feature {
+  background-color: bisque;
+}
+
+section.feature > div > article {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  color: #353535;
+}
+
+section.feature figure img {
+  width: 120px;
+  margin-bottom: 1rem;
+}
+
+section.download {
+  background-color: bisque;
+}
+
+aside.team article {
+  color: #353535;
+  text-align: center;
+}
+
+aside.team article h4 {
+  color: #ffc71f;
+}
+
+aside.team img {
+  width: 150px;
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
+}
+
+footer {
+  background-color: #353535;
+  color: #fff;
+  padding: 24px;
+  text-align: center;
+}
+
+footer span {
+  color: #ffc71f;
+}
+
+@media only screen and (max-width: 600px) {
+  header nav ul,
+  section.about article,
+  section.feature > div > article {
+    flex-direction: column;
+  }
+
+  header {
+    padding: 16px;
+  }
+
+  header nav > div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  section.welcome > div {
+    grid-template-columns: 1fr;
+  }
+
+  header nav ul {
+    display: none;
+  }
+
+  header nav ul.more {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background-color: #353535;
+    padding: 20px 0px;
+  }
+
+  .bar1,
+  .bar2,
+  .bar3 {
+    transition: 0.4s;
+  }
+
+  .more .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+
+  .more .bar2 {
+    opacity: 0;
+  }
+
+  .more .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+  }
+
+  .btn-burger {
+    display: block;
+  }
+
+  .btn-burger div {
+    width: 36px;
+    height: 4px;
+    background-color: #ffc71f;
+    margin-bottom: 8px;
+  }
+
+  .btn-burger div:last-of-type {
+    margin: 0;
+  }
+
+  .hero-image,
+  section.about article img {
+    display: none;
+  }
+
+  section.welcome {
+    min-height: 0;
+  }
+
+  section.welcome article {
+    padding-left: 16px;
+  }
+
+  section.welcome article h2 {
+    font-size: 2rem;
+  }
+
+  section.about article > div:nth-of-type(1) {
+    margin: 0;
+  }
+
+  section.feature figure {
+    margin-bottom: 1.5rem;
+  }
+}
